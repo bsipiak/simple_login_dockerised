@@ -1,6 +1,6 @@
 ## 1. Getting started with Cypress
 
-###1.1 Get a sandbox environment
+### 1.1 Get a sandbox environment
 	
 - Clone the repository: `git clone https://github.com/bsipiak/simple_login_dockerised.git`
 
@@ -40,11 +40,11 @@ Write test that will:
 3. logout,
 4. check if we are back on page 'http://localhost:8080/login.php'
 
-####Data
+#### Data
 - Login: user
 - Password: password
 
-####Hints
+#### Hints
 Check for should and url methods in  Cypress documentation:
 
 https://docs.cypress.io/api/api/table-of-contents.html
