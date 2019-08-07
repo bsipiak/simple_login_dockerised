@@ -4,7 +4,7 @@
 	
 - Clone the repository: `git clone https://github.com/bsipiak/simple_login_dockerised.git`
 
-- Build and start environment: `make up`
+- Build and start environment (make sure docker is up and running): `make up`
 
 - Our project will be available under: http://localhost:8080
 
@@ -12,6 +12,9 @@
 
 - Install cypress in our project: `yarn add cypress --dev`
 - Start cypress: `sudo yarn run cypress open`
+- Change file permissions:
+`sudo chown -R "$(whoami)" cypress`
+
 
 ### 1.3 First test!
 
@@ -23,8 +26,8 @@
             
             cy.visit('http://localhost:8080');
         
-            cy.get('#inputUsername');
-            cy.get('#inputPassword');
+            cy.get('#inputUsername').should('exist');
+            cy.get('#inputPassword').should('exist');
             cy.get(':checkbox[value="remember-me"]');
             cy.get('.btn').contains('Sign in');
         });
@@ -79,6 +82,13 @@ describe('Go to main page', function () {
 
 ```
 -->
+
+#### 1.5 Clean up
+1. Stop docker containers `make stop`
+2. List all containers `docker container ls -a`
+3. Delete containers related to project `docker container rm (container id)`
+4. List docker images `docker image ls` 
+5. Remove docker images (use -f flag to force) `docker image rm (image id)`
 
 
 
