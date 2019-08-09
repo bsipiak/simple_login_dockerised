@@ -209,8 +209,30 @@ describe('Go to main page', function () {
     })
     ```
     -->
+    
+### 10. Fixtures
+1. Go to cypress/fixtures folder
+2. Create new file `credentials.json`
+3. Open file and paste
+    ```json
+    {
+      "username": "user",
+      "password": "password"
+    }
+    ```
+4. In `commands.js` modify login function
+    ```javascript
+    Cypress.Commands.add('login', function() {
+        cy.fixture('credentials').then((credentials) => {
+            cy.get(selectorsLoginPage.username_input).type(credentials.username);
+            cy.get(selectorsLoginPage.password_input).type(credentials.password);
+            cy.get(selectorsLoginPage.sign_in_button).click();
+        })
+    })
+    ```
+5. Run tests to validate
 
-### 10. Clean up
+### 11. Clean up
 1. Stop docker containers `make stop`
 2. List all containers `docker container ls -a`
 3. Delete containers related to project `docker container rm (container id)`
