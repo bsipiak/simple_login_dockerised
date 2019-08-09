@@ -104,13 +104,13 @@ describe('Go to main page', function () {
         }
     }
     ```
-    In my_first_test.js file:
+    In `my_first_test.js` file:
     - at the very top of file add `import { selectors as selectorsLoginPage } from '../selectors/login';`
     - change `cy.get('#inputUsername').should('exist');` into `cy.get(selectorsLoginPage.username_input).should('exist');`
 6. Run tests again to validate
 7. Challenge
 
-    Refactor test from my_first_test.js to use selectors, target elements by `data-cy` attributes.
+    Refactor test from `my_first_test.js` to use selectors, target elements by `data-cy` attributes.
     As they will be used later in the course please name them `username_input`, `password_input`, `remember_me_checkbox`, `sign_in_button`
 
     <!--
@@ -145,7 +145,7 @@ describe('Go to main page', function () {
     -->
 
 ### 7. Exercise II
-1. Create selectors file for site available after user logs in (index.php)
+1. Create selectors file for site available after user logs in (`index.php`)
 2. Add `data-cy` attributes to make site easily testable (optional)
 3. Modify `my_second_test.js` to use selectors
 
