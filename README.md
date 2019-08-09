@@ -1,6 +1,6 @@
-## 1. Getting started with Cypress
+## Getting started with Cypress
 
-### 1.1 Get a sandbox environment
+### 1. Get a sandbox environment
 	
 - Clone the repository: `git clone https://github.com/bsipiak/simple_login_dockerised.git`
 
@@ -8,7 +8,7 @@
 
 - Our project will be available under: http://localhost:8080
 
-### 1.2 Install cypress
+### 2. Install cypress
 
 - Install cypress in our project: `yarn add cypress --dev`
 - Start cypress: `sudo yarn run cypress open`
@@ -16,7 +16,7 @@
 `sudo chown -R "$(whoami)" cypress`
 
 
-### 1.3 First test!
+### 3. First test!
 
 - Create file `my_first_test.js` in folder cypress/integration
 - Paste there this code: 	
@@ -34,7 +34,7 @@
     });
 ```
 
-### 1.4 Exercise I
+### 4. Exercise I
 
 Create test `my_second_test` test that will: 
 1. login to our platform,
@@ -83,14 +83,14 @@ describe('Go to main page', function () {
 ```
 -->
 
-#### 1.5 Run tests from CLI
+### 5. Run tests from CLI
 1. Exit cypress GUI
 2. Delete all example tests created by Cypress as we don't need them
 3. Start Cypress tests from terminal using `sudo cypress run`
 4. Wait for results
 5. Go to cypress/videos folder and check what was recorded by Cypress
 
-#### 1.6 Selectors
+### 6. Selectors
 1. We will create selectors for elements on login page using good practices mentioned here: https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements
 2. Notice that each element has atribute `data-cy`. This is selector insulated from CSS or JS that provides good context
 3. Create new folder "selectors" inside cypress folder
@@ -144,12 +144,12 @@ describe('Go to main page', function () {
     ```
     -->
 
-#### 1.7 Exercise II
+### 7. Exercise II
 1. Create selectors file for site available after user logs in (index.php)
 2. Add `data-cy` attributes to make site easily testable (optional)
 3. Modify `my_second_test` to use selectors
 
-#### 1.8 Commands
+### 8. Commands
 1. Open file `cypress/support/commands.js`
 2. Let's create a custom command that will:
     1. go to our login website
@@ -170,7 +170,7 @@ describe('Go to main page', function () {
 5. Run test to validate
 
 
-#### 1.9 Exercise III
+### 9. Exercise III
 1. Create 2 custom commands and use them in `my_second_test` to replace existing commands:
     1. check if menu contains all elements
     2. logout
@@ -210,7 +210,7 @@ describe('Go to main page', function () {
     ```
     -->
 
-#### 1.10 Clean up
+### 10. Clean up
 1. Stop docker containers `make stop`
 2. List all containers `docker container ls -a`
 3. Delete containers related to project `docker container rm (container id)`
