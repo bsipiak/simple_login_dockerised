@@ -36,7 +36,7 @@
 
 ### 4. Exercise I
 
-Create test `my_second_test` test that will: 
+Create test `my_second_test.js` test that will: 
 1. login to our platform,
 2. check if all elements in menu are present,
 3. check if status says "logged in",
@@ -147,7 +147,7 @@ describe('Go to main page', function () {
 ### 7. Exercise II
 1. Create selectors file for site available after user logs in (index.php)
 2. Add `data-cy` attributes to make site easily testable (optional)
-3. Modify `my_second_test` to use selectors
+3. Modify `my_second_test.js` to use selectors
 
 ### 8. Commands
 1. Open file `cypress/support/commands.js`
@@ -166,17 +166,17 @@ describe('Go to main page', function () {
     })
     ```
     
-4. In `my_second_test` change login logic to this: `cy.login();` 
+4. In `my_second_test.js` change login logic to this: `cy.login();` 
 5. Run test to validate
 
 
 ### 9. Exercise III
-1. Create 2 custom commands and use them in `my_second_test` to replace existing commands:
+1. Create 2 custom commands and use them in `my_second_test.js` to replace existing commands:
     1. check if menu contains all elements
     2. logout
     
     <!--   
-    my_second_test.js
+    my_second_test.js.js
     ```javascript
     describe('Go to main page', function () {
     
